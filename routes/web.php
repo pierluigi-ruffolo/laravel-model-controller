@@ -1,12 +1,9 @@
 <?php
 
+use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
+Route::get('/', [PageController::class, 'home'])->name('home');
 
 
-Route::get("/movies", function () {
-    return view('movies');
-})->name('movies');
+Route::get("/movies", [PageController::class, 'index'])->name('movies');
