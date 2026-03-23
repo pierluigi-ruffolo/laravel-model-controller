@@ -24,7 +24,7 @@
     <div class="card-footer border-secondary bg-transparent d-flex justify-content-between align-items-center">
         <span class="text-secondary small">Media Voto:</span>
         <span class="badge bg-warning text-dark fw-bold shadow-sm">
-            8.8 / 10
+            {{$stars}}
         </span>
     </div>
 </div>
