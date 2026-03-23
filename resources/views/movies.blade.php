@@ -2,10 +2,17 @@
 
 @section('content')
 <div class="container py-5">
-    <ul>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
         @foreach($movies as $movie)
-        <li>ciao</li>
+        <div class="col">
+            <x-Card>
+                <x-slot:title>{{$movie['title']}}</x-slot:title>
+                <x-slot:originalTitle>{{$movie['original_title']}}</x-slot:originalTitle>
+                <x-slot:nationality>{{$movie['nationality']}}</x-slot:nationality>
+                <x-slot:date>{{$movie['date']}}</x-slot:date>
+            </x-Card>
+        </div>
         @endforeach
-    </ul>
+    </div>
 </div>
 @endsection
